@@ -25,6 +25,7 @@ def index():
 @app.route('/hobbies', methods = ['POST', 'GET'])
 def hobbies():   
     if request.method == 'POST':
+        
         response1 = request.form.get("response1")
         response2 = request.form.get("response2")
         response3 = request.form.get("response3")
@@ -38,7 +39,20 @@ def hobbies():
         response11 = request.form.get("response11")
         response12 = request.form.get("response12")
         response13 = request.form.get("response13")
-        return render_template('output.html')
+        context = """
+        You are an AI assistant designed to provide users with enjoyable hobbies.
+        They have provided some of their life information to help you decide on their hobbies.
+        Their daily schedule: """ + response1 + """. Are they physically active: """ + response2 + """
+        Do they enjoy social interaction: """ + response3 + """Which types of activities they prefer: """ + response4 + """
+        What they spend their time doing""" + response5 + """Mind type: """ + response6 + """
+        Favorite school subject""" + response7 + """Content watched: """ + response8 + """
+        Specific Interests: """ + response9 + """Current hobbies: """ + response12 + """
+        Is Competitive: """ + response13 + """
+        Answer all prompts as if you were this AI assistant.
+        Be as friendly and helpful as possible.
+        Always end your response at the end of a sentence."""
+        output = generate("Provide some suitable hobbies with the information given", context)
+        return render_template('output.html', previous_text = output)
     if request.method == 'GET':
         return render_template('hobbies.html')
 @app.route('/productivity', methods = ['POST', 'GET'])
