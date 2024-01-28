@@ -32,7 +32,46 @@ def productivity():
 
 @app.route('/volunteering', methods = ['POST', 'GET'])
 def volunteering():   
+    response1 = ""
+    response2 = ""
+    response3 = ""
+    response4 = ""
+    response5 = ""
+    response6 = ""
+    response7 = ""
+    response8 = ""
+    response9 = ""
+    response10 = ""
+    if request.method == 'POST':
+        response1 = request.form.get("response1")
+        response2 = request.form.get("response2")
+        response3 = request.form.get("response3")
+        response4 = request.form.get("response4")
+        response5 = request.form.get("response5")
+        response6 = request.form.get("response6")
+        response7 = request.form.get("response7")
+        response8 = request.form.get("response8")
+        response9 = request.form.get("response9")
+        response10 = request.form.get("response10")
+    if request.method == 'GET':
+        return response3
     return render_template('volunteering.html')
+
+@app.route('/output', methods = ['POST', 'GET'])
+def output(): 
+    if request.method == 'POST':
+        response1 = request.form.get("response1")
+        response2 = request.form.get("response2")
+        response3 = request.form.get("response3")
+        response4 = request.form.get("response4")
+        response5 = request.form.get("response5")
+        response6 = request.form.get("response6")
+        response7 = request.form.get("response7")
+        response8 = request.form.get("response8")
+        response9 = request.form.get("response9")
+        response10 = request.form.get("response10")
+        return response3
+        return render_template('output.html')
     
 def generate(p1, p2):
     with model.chat_session(p2, prompt_template):

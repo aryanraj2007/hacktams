@@ -17,33 +17,86 @@
 <body>
     <div>
           <!-- navbar -->
-          <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000;">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">Not A Bum</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/productivity">Productivity</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/volunteering">Volunteering</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/hobbies">Hobbies</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Not A Bum</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/productivity">Productivity</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/volunteering">Volunteering</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/hobbies">Hobbies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
     <div>
-      
+      <form action="/output" method = "POST">
+        <h2>Fill out this form and find volunteering opportunities!</h2>
+        <div class="mb-3">
+          
+          <label for="formGroupExampleInput" class="form-label">What are you passionate about?</label>
+          <input type="text" class="form-control" id="formgroup1" name="response1" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">What is your favorite school subject?</label>
+          <input type="text" class="form-control" id="formgroup2" name="response2" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">What activities do you participate in at work/school?</label>
+          <input type="text" class="form-control" id="formgroup3" name="response3" placeholder="">
+          
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">How active do you want to be while volunteering?</label>
+          <input type="text" class="form-control" id="formgroup4" name="response4" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Do you want to be hands on while volunteering?</label>
+          <select name="response5" class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option value="1" id = "formgroup5">Yes</option>
+            <option value="2" id = "formgroup5">No</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Do you like interacting with people?</label>
+          <select name="response6" class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option value="1" id = "formgroup6">Yes</option>
+            <option value="2" id = "formgroup6">No</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">How much do you like critical thinking?</label>
+          <input type="text" class="form-control" id="formgroup7" name="response7" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">What are your favorite things to do?</label>
+          <input type="text" class="form-control" id="formgroup8" name="response8" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">How long do you want to spend volunteering?</label>
+          <input type="text" class="form-control" id="formgroup9" name="response9" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Why do you want to volunteer?</label>
+          <input type="text" class="form-control" id="formgroup10" name="response10" placeholder="">
+        </div>
+      <button type="submit" class="btn">Submit Form</button>
+    </form>
     </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
