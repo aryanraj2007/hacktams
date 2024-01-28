@@ -24,24 +24,6 @@ def index():
     
 @app.route('/hobbies', methods = ['POST', 'GET'])
 def hobbies():   
-    return render_template('hobbies.html')
-
-@app.route('/productivity', methods = ['POST', 'GET'])
-def productivity():   
-    return render_template('productivity.html')
-
-@app.route('/volunteering', methods = ['POST', 'GET'])
-def volunteering():   
-    response1 = ""
-    response2 = ""
-    response3 = ""
-    response4 = ""
-    response5 = ""
-    response6 = ""
-    response7 = ""
-    response8 = ""
-    response9 = ""
-    response10 = ""
     if request.method == 'POST':
         response1 = request.form.get("response1")
         response2 = request.form.get("response2")
@@ -53,9 +35,44 @@ def volunteering():
         response8 = request.form.get("response8")
         response9 = request.form.get("response9")
         response10 = request.form.get("response10")
+        response11 = request.form.get("response11")
+        response12 = request.form.get("response12")
+        response13 = request.form.get("response13")
+        return render_template('output.html')
     if request.method == 'GET':
-        return response3
-    return render_template('volunteering.html')
+        return render_template('hobbies.html')
+@app.route('/productivity', methods = ['POST', 'GET'])
+def productivity():   
+    if request.method == 'POST':
+        response1 = request.form.get("response1")
+        response2 = request.form.get("response2")
+        response3 = request.form.get("response3")
+        response4 = request.form.get("response4")
+        response5 = request.form.get("response5")
+        response6 = request.form.get("response6")
+        response7 = request.form.get("response7")
+        response8 = request.form.get("response8")
+        response9 = request.form.get("response9")
+        response10 = request.form.get("response10")
+        return render_template('output.html')
+    if request.method == 'GET':
+        return render_template('productivity.html')
+@app.route('/volunteering', methods = ['POST', 'GET'])
+def volunteering():
+    if request.method == 'POST':
+        response1 = request.form.get("response1")
+        response2 = request.form.get("response2")
+        response3 = request.form.get("response3")
+        response4 = request.form.get("response4")
+        response5 = request.form.get("response5")
+        response6 = request.form.get("response6")
+        response7 = request.form.get("response7")
+        response8 = request.form.get("response8")
+        response9 = request.form.get("response9")
+        response10 = request.form.get("response10")   
+        return render_template('output.html')
+    if request.method == 'GET':
+        return render_template('volunteering.html')
 
 @app.route('/output', methods = ['POST', 'GET'])
 def output(): 
@@ -70,7 +87,6 @@ def output():
         response8 = request.form.get("response8")
         response9 = request.form.get("response9")
         response10 = request.form.get("response10")
-        return response3
         return render_template('output.html')
     
 def generate(p1, p2):
