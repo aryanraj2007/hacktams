@@ -5,6 +5,11 @@ body{
     font-size: 14pt;
 }
 
+form{
+    text-align: left;
+    padding: 4%;
+}
+
 img{
     width: 70%;
 }
