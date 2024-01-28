@@ -17,3 +17,8 @@ body{
 .active{
     color: #DFC543;
 } 
+
+.navbar-brand{
+    color: #DFC543;
+    font-weight: bold;
+}
