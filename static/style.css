@@ -45,3 +45,14 @@ p{
     font-family: 'Workbench', sans-serif;
     padding: 2%;
 }
+
+.output-text {
+    margin: 4%;
+    padding: 1.2%;
+
+}
+
+.btn-warning{
+    background-color: #DFC543;
+    color: azure;
+}

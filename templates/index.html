@@ -26,7 +26,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/productivity">Productivity</a>
@@ -37,6 +37,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="/hobbies">Hobbies</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/chat">Chat</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -45,29 +48,14 @@
     <div class="container text-center body">
       <div class="row">
         <div class="col align-self-center">
-          <img src="notABum.tech_1.png" alt="">
+          <img src={{ url_for('static', filename='/notABum.tech_1.jpg') }}>
         </div>
         <div class="col align-self-center text-box">
           <p>
             Welcome to NotABum! This is the one-stop shop for you to transform yourself from a bum to a winner. We’ll use our groundbreaking AI to analyze you as a person and help YOU improve yourself. Can't figure out where to volunteer? Need a new hobby? Or do you just want to be more productive? Well… You're at the right place!
          </p>
         </p>
-        <form action="/" method = "POST">
-          <label for="freeform">Enter personality for AI / Rules the AI has to follow</label>
-          <br>
-          <textarea id="freeform" name="freeform" rows="4" cols="50">
-          {% if previous_text %}{{ previous_text }}{% endif %}   
-          </textarea>
-          <p>Prompt <input type = "text" name = "Prompt" placeholder="Prompt" ></p>
-     
-          <p><input type = "submit" value = "Submit" /></p>
-     
-     
-        </form>
-        <p> Response </p>
-        {% if processed_text %}
-          <p id="text">{{ processed_text }}</p>
-        {% endif %}
+        
         </div>
       </div>
     </div>
